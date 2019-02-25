@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<station>
+	<block>
+		<display id="A1" position="0"></display>
+		<display id="A2" position="1"></display>
+		<display id="B1" position="2"></display>
+	</block>
+</station>
