@@ -1,1 +1,5 @@
-XML xml= loadXML("config.xml");
+XML xml;
+
+void loadConfig(){
+  xml = loadXML("config.xml");
+}
