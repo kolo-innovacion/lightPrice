@@ -2,8 +2,8 @@
 
 void setup() {
   size(300, 400);
-  //xml = loadXML("config.xml");
   loadConfig();
+  createStation();
 }
 void draw() {
 }
