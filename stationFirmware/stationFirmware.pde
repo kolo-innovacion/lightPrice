@@ -3,17 +3,15 @@ Display d1 = new Display(0, "A");
 Display d2 = new Display(1, "A");
 Display d3 = new Display(2, "B");
 
-String value1="11.11";
-String value2="33.33";
-String value3="77.77";
+Block b1;
+
 
 String[] values = {"11.11", "33.33", "77.77"};
+String[] types = {"A", "A", "B"};
 
 void setup() {
   size(300, 400);
-  d1.setValue(value1);
-  d2.setValue(value2);
-  d3.setValue(value3);
+  b1 = new Block(3, 0);//instanciation; 3 displays, COM port in index 0
 }
 void draw() {
 }
