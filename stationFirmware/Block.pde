@@ -22,4 +22,13 @@ class Block {
     Display temp = displays.get(index);
     return temp.getValue();
   }
+
+  void formatValues(){
+String threeVals=displays.get(0).getValue()+displays.get(1).getValue()+displays.get(2).getValue();
+println(threeVals);
+char[] threeValsChar = threeVals.toCharArray();
+println(threeValsChar.length);
+
+  }
+
 }

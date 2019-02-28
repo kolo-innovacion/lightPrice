@@ -13,7 +13,10 @@ void setup() {
   size(300, 400);
   b1 = new Block(3, 0);//instanciation; 3 displays, COM port in index 0
   b1.setValue(0, "34.34");
+  b1.setValue(1,"77.77");
+  b1.setValue(2,"88.88");
   println(b1.getValue(0));
+  b1.formatValues();
 }
 void draw() {
 }
