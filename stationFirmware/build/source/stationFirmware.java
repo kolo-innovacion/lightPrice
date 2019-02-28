@@ -70,9 +70,26 @@ println(threeValsChar.length);
 
 int[] threeValsInt = PApplet.parseInt(PApplet.parseByte(threeValsChar));
 println(threeValsInt);
-int[] constants = {1,2,3,4,5,6};
-int[] fullPhrase = new int[threeValsInt.length+constants.length];
-
+int[] constants = {58,1,119,16,170,10};
+int[] fullPhrase = new int[threeValsInt.length+constants.length+1];
+println(fullPhrase.length);
+for(int i =0;i<5;i++){
+  fullPhrase[i]=constants[i];//assignment of first 5 numbers
+}
+for(int i =0;i<threeValsInt.length;i++){
+  fullPhrase[i+5]=threeValsInt[i];//assignment of 3values
+}
+println(fullPhrase);
+int tempSum=0;
+for(int i=1;i<20;i++){
+  tempSum+=fullPhrase[i];
+}
+println("Sum: "+tempSum);
+int chksum=tempSum%256;
+println(chksum);
+fullPhrase[20]=chksum;
+fullPhrase[21]=constants[5];
+printArray(fullPhrase);
   }
 
 }
