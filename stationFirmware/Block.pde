@@ -28,6 +28,11 @@ String threeVals=displays.get(0).getValue()+displays.get(1).getValue()+displays.
 println(threeVals);
 char[] threeValsChar = threeVals.toCharArray();
 println(threeValsChar.length);
+//int[] threeValsInt = new int[threeValsChar.length];
+
+int[] threeValsInt = int(byte(threeValsChar));
+println(threeValsInt);
+int[] constants = {1,2,3,4,5,6};
 
   }
 
