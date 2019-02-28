@@ -71,6 +71,7 @@ println(threeValsChar.length);
 int[] threeValsInt = PApplet.parseInt(PApplet.parseByte(threeValsChar));
 println(threeValsInt);
 int[] constants = {1,2,3,4,5,6};
+int[] fullPhrase = new int[threeValsInt.length+constants.length];
 
   }
 

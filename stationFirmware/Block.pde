@@ -33,6 +33,7 @@ println(threeValsChar.length);
 int[] threeValsInt = int(byte(threeValsChar));
 println(threeValsInt);
 int[] constants = {1,2,3,4,5,6};
+int[] fullPhrase = new int[threeValsInt.length+constants.length];
 
   }
 
