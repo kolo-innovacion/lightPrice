@@ -17,4 +17,7 @@ class Display {
   void setValue(String input) {
     value=input;
   }
+  String getType() {
+    return type;
+  }
 } 

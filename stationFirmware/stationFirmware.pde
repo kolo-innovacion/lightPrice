@@ -20,6 +20,7 @@ void setup() {
   b1.formatValues();
 
   s1.askData();
+  //blockAssign();
 }
 void draw() {
 }

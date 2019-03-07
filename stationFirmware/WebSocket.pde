@@ -11,8 +11,9 @@ void webSocketEvent(String input) {
   if (checkFetch(input)) {
     println("Correct Data. Book updated");
     println(input);
-
+    //blockAssign();
     temp=parseXML(input);
+    digestXML(temp);
   } else {
     println("Wrong Data");
   }
@@ -27,10 +28,6 @@ boolean checkFetch(String input) {
 }
 
 void digestXML(XML input) {
-  //book = loadXML("book.xml");
-  //book = parseXML("<book><value><type>A</type><figure>11.11</figure></value><value><type>B</type><figure>33.33</figure></value></book>");
-  //book=parseXML(this.getBook());
-  //book=parseXML(bookString);
   XML[] values = input.getChildren("value");//the book contains values; these are saved as an xml object array
 
   for (int i = 0; i < values.length; i++) {
@@ -40,11 +37,18 @@ void digestXML(XML input) {
 
     String type=typeObj.getContent();
     String figure=figureObj.getContent();
-    println(type);
-    println(figure);
-    //String id = children[i].getString("type");
-    //String coloring = children[i].getString("figure");
-    //String name = children[i].getContent();
-    //println(id + ", " + coloring + ", " + name);
+    println("XML current type: "+type+" . Value: "+figure);
+
+    for (int j =0; j<b1.displays.size(); j++) {
+      Display temp =  b1.displays.get(j);
+      println("Display type: "+temp.getType());
+    }
+  }
+}
+
+void blockAssign() {
+  for (int i =0; i<b1.displays.size(); i++) {
+    Display temp =  b1.displays.get(i);
+    println("TYPE: "+temp.getType());
   }
 }
