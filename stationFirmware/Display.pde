@@ -5,7 +5,7 @@ class Display {
 
   Display () {
   }
-  
+
   Display (int pos, String typ) {
     position=pos;
     type=typ;

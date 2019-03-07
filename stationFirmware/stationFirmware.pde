@@ -18,6 +18,8 @@ void setup() {
   b1.setValue(2, "99.99");
   println(b1.getValue(0));
   b1.formatValues();
+
+  s1.askData();
 }
 void draw() {
 }
