@@ -6,7 +6,7 @@ class Station {
   Station() {
     instanceSocket();
   }
-  void askData() {
+  void updateValues() {
     stationSocket.sendMessage("giveIt2MeBaby");
   }
   void updateBook(String input) {

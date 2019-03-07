@@ -41,7 +41,14 @@ void digestXML(XML input) {
 
     for (int j =0; j<b1.displays.size(); j++) {
       Display temp =  b1.displays.get(j);
-      println("Display type: "+temp.getType());
+      println("Display "+j+ " type: "+temp.getType());
+
+      if (type.equals(temp.getType())) {
+        b1.displays.get(j).setValue(figure);
+        println("Value assigned");
+      } else {
+        //println("NO NO NO COINCIDENCE");
+      }
     }
   }
 }

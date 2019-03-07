@@ -19,7 +19,7 @@ void setup() {
   println(b1.getValue(0));
   b1.formatValues();
 
-  s1.askData();
+  s1.updateValues();
   //blockAssign();
 }
 void draw() {
