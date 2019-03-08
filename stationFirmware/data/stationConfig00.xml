@@ -1,0 +1,17 @@
+<station id="1010">
+	<block>COM14
+		
+		<display>
+			<position>0</position>
+			<type>A</type>
+		</display>
+		<display>
+			<position>1</position>
+			<type>A</type>
+		</display>
+		<display>
+			<position>2</position>
+			<type>B</type>
+		</display>
+	</block>
+</station>
