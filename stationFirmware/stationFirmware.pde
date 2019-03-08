@@ -12,7 +12,6 @@ String[] types = {"A", "A", "B"};
 
 void setup() {
   size(300, 400);
-  createConfig();
 
   b1 = new Block(3, 0);//instanciation; 3 displays, COM port in index 0
   b1.setValue(0, "12.34");
@@ -23,6 +22,8 @@ void setup() {
 
   s1.updateValues();
   //blockAssign();
+
+  createConfig();
 }
 void draw() {
 }
