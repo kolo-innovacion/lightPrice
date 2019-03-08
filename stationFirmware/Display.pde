@@ -3,12 +3,10 @@ class Display {
   int position;//0-2, this is for the serial bytes reference; 0= master; 1,2 = Slaves 1 and 2
   String type;// price type: A= diesel, B= magna, C= premium...
 
-  Display () {
-  }
-
   Display (int pos, String typ) {
     position=pos;
     type=typ;
+    println("Display  "+pos+"  has been added with type  "+typ);
   }
 
   String getValue() {

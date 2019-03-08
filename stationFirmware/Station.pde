@@ -5,6 +5,7 @@ class Station {
   String bookString="";
   Station() {
     instanceSocket();
+    
   }
   void updateValues() {
     stationSocket.sendMessage("giveIt2MeBaby");

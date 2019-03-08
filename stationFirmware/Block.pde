@@ -9,10 +9,11 @@ class Block {
     for (int i =0; i<numDisplays; i++) {
       displays.add(new Display(i, types[i]));
 
-      println("Display  "+i+"  has been added with type  "+types[i]);
+      //println("Display  "+i+"  has been added with type  "+types[i]);
     }
-    println(numDisplays+"  displays have been created in the block");
+    println("Block has been created with "+numD+" displays in port "+numP);
   }
+
   void setValue(int index, String value) {
     Display temp = displays.get(index);
     temp.setValue(value);
