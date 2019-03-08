@@ -6,7 +6,7 @@ class Display {
   Display (int pos, String typ) {
     position=pos;
     type=typ;
-    println("Display  "+pos+"  has been added with type  "+typ);
+    println("    Display  "+pos+"  has been added with type  "+typ);
   }
 
   String getValue() {

@@ -1,17 +1,12 @@
 class Block {
-  int numDisplays;//1-3
+  int position;//1-3
   int port;
   ArrayList<Display> displays  = new ArrayList<Display>();
 
-  Block(int numD, int numP) {
-    numDisplays=numD;
+  Block(int pos, int numP) {
+    position=pos;
     port=numP;
-    for (int i =0; i<numDisplays; i++) {
-      displays.add(new Display(i, types[i]));
-
-      //println("Display  "+i+"  has been added with type  "+types[i]);
-    }
-    println("Block has been created with "+numD+" displays in port "+numP);
+    println("  Block "+pos+" created in port "+numP);
   }
 
   void setValue(int index, String value) {
