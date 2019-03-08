@@ -28,4 +28,6 @@ void createConfig() {
   //println();
 
   println("Station Instancing END -----");
+  println(  s0.blocks.get(0).displays.get(2).getType());//this is a test! Objects are real!!! (obviously, inside array limits)
+  //  println();
 }
