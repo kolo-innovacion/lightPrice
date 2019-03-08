@@ -1,6 +1,7 @@
 XML station;
 void createConfig() {
-  station = loadXML("stationConfig00.xml");
+  //station = loadXML("stationConfig00.xml");
+  station = loadXML("stationConfig01.xml");
 
   XML[] blocks = station.getChildren("block");
   //println("Total blocks in station:  "+blocks.length);
