@@ -6,51 +6,50 @@ class Station {
   Station() {
     instanceSocket();
   }
-  void updateValues() {
+  void updateBook() {
     stationSocket.sendMessage("giveIt2MeBaby");
-  }
-  void updateBook(String input) {
-    book = parseXML(input);
+    println("Petition sent.");
   }
   void setBook(XML input) {
+    book=input;
+    digestXML(book);
   }
   XML getBook() {
     return book;
   }
-  
+
   void createStation() {
-  XML configFile;
-  //station = loadXML("stationConfig00.xml");
-  configFile = loadXML("stationConfig01.xml");
+    XML configFile;
+    //station = loadXML("stationConfig00.xml");
+    configFile = loadXML("stationConfig01.xml");
 
-  XML[] blocks = configFile.getChildren("block");
-  //println("Total blocks in station:  "+blocks.length);
+    XML[] blocks = configFile.getChildren("block");
+    //println("Total blocks in station:  "+blocks.length);
 
-  //s0=new Station();
-  println("Station Instancing START");
+    //s0=new Station();
+    println("Station Instancing START");
 
-  for (int i=0; i<blocks.length; i++) {
+    for (int i=0; i<blocks.length; i++) {
 
-    XML[] displays = blocks[i].getChildren("display");
-    //println("Block "+i+ "  has  "+displays.length+"  displays.");
+      XML[] displays = blocks[i].getChildren("display");
+      //println("Block "+i+ "  has  "+displays.length+"  displays.");
 
-    s0.blocks.add(new Block(i, 0));
-    //println("Station has"+s0.blocks.size()+"blocks.");
-    for (int j=0; j<displays.length; j++) {
-      XML pos = displays[j].getChild("position");
-      XML typ = displays[j].getChild("type");
-      //println(pos.getContent());
-      String temPos=pos.getContent();
-      String temTyp=typ.getContent();
-      s0.blocks.get(i).displays.add(new Display(int(temPos), temTyp));
-      //println("Display "+j+" has position "+int(temPos)+" and type "+typ.getContent());
+      s0.blocks.add(new Block(i, 0));
+      //println("Station has"+s0.blocks.size()+"blocks.");
+      for (int j=0; j<displays.length; j++) {
+        XML pos = displays[j].getChild("position");
+        XML typ = displays[j].getChild("type");
+        //println(pos.getContent());
+        String temPos=pos.getContent();
+        String temTyp=typ.getContent();
+        s0.blocks.get(i).displays.add(new Display(int(temPos), temTyp));
+        //println("Display "+j+" has position "+int(temPos)+" and type "+typ.getContent());
+      }
     }
-  }
-  //println();
+    //println();
 
-  println("Station Instancing END -----");
-  println(  s0.blocks.get(0).displays.get(2).getType());//this is a test! Objects are real!!! (obviously, inside array limits)
-  //  println();
-}
-  
+    println("Station Instancing END -----");
+    println(  s0.blocks.get(0).displays.get(2).getType());//this is a test! Objects are real!!! (obviously, inside array limits)
+    //  println();
+  }
 }

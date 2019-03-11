@@ -16,6 +16,7 @@ void setup() {
 
   instanceStation();
   s0.createStation();
+  s0.updateBook();
   //b1 = new Block(3, 0);//instanciation; 3 displays, COM port in index 0
   //b1.setValue(0, "12.34");
   //b1.setValue(1, "56.78");

@@ -5,6 +5,10 @@ void instanceSocket() {
   stationSocket= new WebsocketClient(this, "ws://localhost:8025/john");
 }
 
+void webSocketEvent0(String input) {
+  println("Answer achieved.");
+}
+
 void webSocketEvent(String input) {
   XML temp = new XML("null");
 
@@ -13,7 +17,8 @@ void webSocketEvent(String input) {
     println(input);
     //blockAssign();
     temp=parseXML(input);
-    digestXML(temp);
+    s0.setBook(temp);
+    //digestXML(temp);
   } else {
     println("Wrong Data");
   }
@@ -27,7 +32,7 @@ boolean checkFetch(String input) {
   }
 }
 
-void digestXML(XML input) {
+void digestXML0(XML input) {
   XML[] values = input.getChildren("value");//the book contains values; these are saved as an xml object array
 
   for (int i = 0; i < values.length; i++) {
@@ -50,6 +55,35 @@ void digestXML(XML input) {
         //println("NO NO NO COINCIDENCE");
       }
     }
+  }
+}
+
+void digestXML(XML input) {
+  XML[] values = input.getChildren("value");//the book contains values; these are saved as an xml object array
+
+  for (int i = 0; i < values.length; i++) {
+    //every value has a type and a figure
+    XML typeObj=values[i].getChild("type");//this xml object has the interesting content
+    XML figureObj=values[i].getChild("figure");//this xml object has the interesting content
+
+    String type=typeObj.getContent();
+    String figure=figureObj.getContent();
+    println("XML current type: "+type+" . Value: "+figure);
+
+
+    /*
+    for (int j =0; j<b1.displays.size(); j++) {
+     Display temp =  b1.displays.get(j);
+     println("Display "+j+ " type: "+temp.getType());
+     
+     if (type.equals(temp.getType())) {
+     b1.displays.get(j).setValue(figure);
+     println("Value assigned");
+     } else {
+     //println("NO NO NO COINCIDENCE");
+     }
+     }
+     */
   }
 }
 
