@@ -1,7 +1,8 @@
 class Station {
   //station is a client, it contains a web socket pointing to the server and also contains blocks of displays
   ArrayList<Block> blocks  = new ArrayList<Block>();
-  XML book;
+  //XML book;
+  StringDict book =new StringDict();
   String bookString="";
   Station() {
     instanceSocket();
@@ -10,12 +11,35 @@ class Station {
     stationSocket.sendMessage("giveIt2MeBaby");
     println("Petition sent.");
   }
+
+
+
+
+  //void setBook(XML input) {
+  //  book=input;
+  //  digestXML(book);
+  //}
+
+
+
+  //XML getBook() {
+  //  return book;
+  //}
+
   void setBook(XML input) {
-    book=input;
-    digestXML(book);
-  }
-  XML getBook() {
-    return book;
+    XML[] values = input.getChildren("value");//the book contains values; these are saved as an xml object array
+
+    for (int i = 0; i < values.length; i++) {
+      //every value has a type and a figure
+      XML typeObj=values[i].getChild("type");//this xml object has the interesting content
+      XML figureObj=values[i].getChild("figure");//this xml object has the interesting content
+
+      String type=typeObj.getContent();
+      String figure=figureObj.getContent();
+      println("XML current type: "+type+" . Value: "+figure);
+      s0.book.set(type, figure);
+      println("Dictionary: "+s0.book.get(type));
+    }
   }
 
   void updateBlocks() {
@@ -24,7 +48,7 @@ class Station {
       for (int j=0; j<blocks.get(i).displays.size(); j++) {
         //j is the displays index
         String currType=blocks.get(i).displays.get(j).getType();
-        println("Block "+i+" display "+j+" has type"+currType);
+        println("Block "+i+" display "+j+" has type "+currType);
       }
     }
   }
@@ -62,5 +86,10 @@ class Station {
     println("Station Instancing END -----");
     println(  s0.blocks.get(0).displays.get(2).getType());//this is a test! Objects are real!!! (obviously, inside array limits)
     //  println();
+  }
+
+  void setDictionary() {
+    book.set("A", "11.11");
+    book.set("B", "33.33");
   }
 }

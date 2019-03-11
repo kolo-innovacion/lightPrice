@@ -14,7 +14,7 @@ void webSocketEvent(String input) {
 
   if (checkFetch(input)) {
     println("Correct Data. Book updated");
-    println(input);
+    //println(input);
     //blockAssign();
     temp=parseXML(input);
     s0.setBook(temp);
@@ -43,6 +43,7 @@ void digestXML0(XML input) {
     String type=typeObj.getContent();
     String figure=figureObj.getContent();
     println("XML current type: "+type+" . Value: "+figure);
+    s0.book.set(type, figure);
 
     for (int j =0; j<b1.displays.size(); j++) {
       Display temp =  b1.displays.get(j);
@@ -69,6 +70,8 @@ void digestXML(XML input) {
     String type=typeObj.getContent();
     String figure=figureObj.getContent();
     println("XML current type: "+type+" . Value: "+figure);
+    s0.book.set(type, figure);
+    println(s0.book.get(type));
 
 
     /*
