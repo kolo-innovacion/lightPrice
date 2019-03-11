@@ -18,6 +18,17 @@ class Station {
     return book;
   }
 
+  void updateBlocks() {
+    for (int i=0; i<blocks.size(); i++) {
+      //i is the blocks index
+      for (int j=0; j<blocks.get(i).displays.size(); j++) {
+        //j is the displays index
+        String currType=blocks.get(i).displays.get(j).getType();
+        println("Block "+i+" display "+j+" has type"+currType);
+      }
+    }
+  }
+
   void createStation() {
     XML configFile;
     //station = loadXML("stationConfig00.xml");
