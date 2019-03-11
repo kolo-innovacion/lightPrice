@@ -48,7 +48,9 @@ class Station {
       for (int j=0; j<blocks.get(i).displays.size(); j++) {
         //j is the displays index
         String currType=blocks.get(i).displays.get(j).getType();
-        println("Block "+i+" display "+j+" has type "+currType);
+        blocks.get(i).displays.get(j).setValue(book.get(currType));
+        String currValue=blocks.get(i).displays.get(j).getValue();
+        println("Block "+i+" display "+j+" has type "+currType+" and price of "+currValue);
       }
     }
   }
