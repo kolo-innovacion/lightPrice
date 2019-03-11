@@ -1,12 +1,14 @@
-XML station;
-void createConfig() {
-  //station = loadXML("stationConfig00.xml");
-  station = loadXML("stationConfig01.xml");
 
-  XML[] blocks = station.getChildren("block");
+/*
+void createConfig() {
+  XML configFile;
+  //station = loadXML("stationConfig00.xml");
+  configFile = loadXML("stationConfig01.xml");
+
+  XML[] blocks = configFile.getChildren("block");
   //println("Total blocks in station:  "+blocks.length);
 
-  s0=new Station();
+  //s0=new Station();
   println("Station Instancing START");
 
   for (int i=0; i<blocks.length; i++) {
@@ -32,3 +34,4 @@ void createConfig() {
   println(  s0.blocks.get(0).displays.get(2).getType());//this is a test! Objects are real!!! (obviously, inside array limits)
   //  println();
 }
+*/

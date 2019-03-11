@@ -5,7 +5,7 @@
 
 Block b1;
 
-Station s1 = new Station();
+//Station s1 = new Station();
 Station s0;
 
 String[] values = {"11.11", "33.33", "77.77"};
@@ -14,6 +14,8 @@ String[] types = {"A", "A", "B"};
 void setup() {
   size(300, 400);
 
+  instanceStation();
+  s0.createStation();
   //b1 = new Block(3, 0);//instanciation; 3 displays, COM port in index 0
   //b1.setValue(0, "12.34");
   //b1.setValue(1, "56.78");
@@ -23,8 +25,10 @@ void setup() {
 
   //s1.updateValues();
   //blockAssign();
-
-  createConfig();
 }
 void draw() {
+}
+
+void instanceStation() {
+  s0=new Station();
 }
