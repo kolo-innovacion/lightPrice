@@ -71,7 +71,7 @@ class Station {
       XML[] displays = blocks[i].getChildren("display");
       //println("Block "+i+ "  has  "+displays.length+"  displays.");
 
-      s0.blocks.add(new Block(i, 0));
+      s0.blocks.add(new Block(i, "COM XX"));
       //println("Station has"+s0.blocks.size()+"blocks.");
       for (int j=0; j<displays.length; j++) {
         XML pos = displays[j].getChild("position");

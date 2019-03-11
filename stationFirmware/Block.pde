@@ -1,12 +1,13 @@
 class Block {
   int position;//1-3
-  int port;
+  String portName;
   ArrayList<Display> displays  = new ArrayList<Display>();
 
-  Block(int pos, int numP) {
-    position=pos;
-    port=numP;
-    println("  Block "+pos+" created in port "+numP);
+  Block(int input1, String input2) {
+    position=input1;
+    portName=input2;
+    //println("  Block "+input1+" created in port "+input2);
+    println("  Block "+position+" created in port "+portName);
   }
 
   void setValue(int index, String value) {
