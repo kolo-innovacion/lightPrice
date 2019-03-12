@@ -4,6 +4,7 @@ class Station {
   //XML book;
   StringDict book =new StringDict();
   String bookString="";
+  String configPath="stationConfig01.xml";
   Station() {
     instanceSocket();
   }
@@ -11,20 +12,6 @@ class Station {
     stationSocket.sendMessage("giveIt2MeBaby");
     println("Petition sent.");
   }
-
-
-
-
-  //void setBook(XML input) {
-  //  book=input;
-  //  digestXML(book);
-  //}
-
-
-
-  //XML getBook() {
-  //  return book;
-  //}
 
   void setBook(XML input) {
     XML[] values = input.getChildren("value");//the book contains values; these are saved as an xml object array
@@ -57,8 +44,8 @@ class Station {
 
   void createStation() {
     XML configFile;
-    //station = loadXML("stationConfig00.xml");
-    configFile = loadXML("stationConfig01.xml");
+    //station = loadXML("stationConfig01.xml");
+    configFile = loadXML(configPath);
 
     XML[] blocks = configFile.getChildren("block");
     //println("Total blocks in station:  "+blocks.length);
@@ -68,7 +55,10 @@ class Station {
 
     for (int i=0; i<blocks.length; i++) {
 
+      XML aux = blocks[i].getChild(0);
+      printArray(aux);
       XML[] displays = blocks[i].getChildren("display");
+      //println(blocks[i].getContent()+"cycle  "+i);
       //println("Block "+i+ "  has  "+displays.length+"  displays.");
 
       s0.blocks.add(new Block(i, "COM XX"));

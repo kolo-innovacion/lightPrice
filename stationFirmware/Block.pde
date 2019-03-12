@@ -10,6 +10,14 @@ class Block {
     println("  Block "+position+" created in port "+portName);
   }
 
+  void setPortName(String input) {
+    portName=input;
+  }
+
+  String getPortName() {
+    return portName;
+  }
+
   void setValue(int index, String value) {
     Display temp = displays.get(index);
     temp.setValue(value);
