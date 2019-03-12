@@ -58,7 +58,6 @@ class Station {
 
       XML port = blocks[i].getChild("port");
       String currPort=port.getContent();
-      //println("Current port:  "+currPort);
 
       XML[] displays = blocks[i].getChildren("display");
       //println(blocks[i].getContent()+"cycle  "+i);
