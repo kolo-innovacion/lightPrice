@@ -4,7 +4,8 @@ class Station {
   //XML book;
   StringDict book =new StringDict();
   String bookString="";
-  String configPath="stationConfig01.xml";
+  //String configPath="stationConfig01.xml";
+  String configPath="stationConfig02.xml";
   Station() {
     instanceSocket();
   }
@@ -55,13 +56,15 @@ class Station {
 
     for (int i=0; i<blocks.length; i++) {
 
-      XML aux = blocks[i].getChild(0);
-      printArray(aux);
+      XML port = blocks[i].getChild("port");
+      String currPort=port.getContent();
+      //println("Current port:  "+currPort);
+
       XML[] displays = blocks[i].getChildren("display");
       //println(blocks[i].getContent()+"cycle  "+i);
       //println("Block "+i+ "  has  "+displays.length+"  displays.");
 
-      s0.blocks.add(new Block(i, "COM XX"));
+      s0.blocks.add(new Block(i, currPort));
       //println("Station has"+s0.blocks.size()+"blocks.");
       for (int j=0; j<displays.length; j++) {
         XML pos = displays[j].getChild("position");
