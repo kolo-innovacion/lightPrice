@@ -2,6 +2,7 @@ class Block {
   int position;//1-3
   String portName;
   ArrayList<Display> displays  = new ArrayList<Display>();
+  Serial serialPort;
 
   Block(int input1, String input2) {
     position=input1;
