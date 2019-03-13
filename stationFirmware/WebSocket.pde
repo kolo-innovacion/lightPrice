@@ -2,25 +2,25 @@ import websockets.*;
 WebsocketClient stationSocket;
 
 void instanceSocket() {
-  stationSocket= new WebsocketClient(this, "ws://localhost:8025/john");
- 
-  //stationSocket= new WebsocketClient(this, "ws://167.114.208.204:8025/john");
-}
+  //stationSocket= new WebsocketClient(this, "ws://localhost:8025/john");
 
-void webSocketEvent0(String input) {
-  println("Answer achieved.");
+  stationSocket= new WebsocketClient(this, "ws://167.114.208.204:8025/john");
 }
 
 void webSocketEvent(String input) {
   XML temp = new XML("null");
 
   if (checkFetch(input)) {
+    println();
+
     println("Correct Data. Book updated");
-    //println(input);
-    //blockAssign();
+
+    println();
+
+
+
     temp=parseXML(input);
     s0.setBook(temp);
-    //digestXML(temp);
   } else {
     println("Wrong Data");
   }

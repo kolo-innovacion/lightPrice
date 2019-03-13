@@ -31,6 +31,7 @@ class Station {
   }
 
   void updateBlocks() {
+    delay(1000);
     for (int i=0; i<blocks.size(); i++) {
       //i is the blocks index
       for (int j=0; j<blocks.get(i).displays.size(); j++) {
@@ -83,7 +84,7 @@ class Station {
   }
 
   void setDictionary() {
-    book.set("A", "11.11");
-    book.set("B", "33.33");
+    book.set("A", "88.88");
+    book.set("B", "99.99");
   }
 }

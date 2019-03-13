@@ -8,7 +8,7 @@ Block b1;
 //Station s1 = new Station();
 Station s0;
 
-String[] values = {"11.11", "33.33", "77.77"};
+String[] values = {"88.88", "99.99", "77.77"};
 String[] types = {"A", "A", "B"};
 
 void setup() {
