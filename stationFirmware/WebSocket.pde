@@ -34,33 +34,6 @@ boolean checkFetch(String input) {
   }
 }
 
-void digestXML0(XML input) {
-  XML[] values = input.getChildren("value");//the book contains values; these are saved as an xml object array
-
-  for (int i = 0; i < values.length; i++) {
-    //every value has a type and a figure
-    XML typeObj=values[i].getChild("type");//this xml object has the interesting content
-    XML figureObj=values[i].getChild("figure");//this xml object has the interesting content
-
-    String type=typeObj.getContent();
-    String figure=figureObj.getContent();
-    println("XML current type: "+type+" . Value: "+figure);
-    s0.book.set(type, figure);
-
-    for (int j =0; j<b1.displays.size(); j++) {
-      Display temp =  b1.displays.get(j);
-      println("Display "+j+ " type: "+temp.getType());
-
-      if (type.equals(temp.getType())) {
-        b1.displays.get(j).setValue(figure);
-        println("Value assigned");
-      } else {
-        //println("NO NO NO COINCIDENCE");
-      }
-    }
-  }
-}
-
 void digestXML(XML input) {
   XML[] values = input.getChildren("value");//the book contains values; these are saved as an xml object array
 
@@ -74,27 +47,5 @@ void digestXML(XML input) {
     println("XML current type: "+type+" . Value: "+figure);
     s0.book.set(type, figure);
     println(s0.book.get(type));
-
-
-    /*
-    for (int j =0; j<b1.displays.size(); j++) {
-     Display temp =  b1.displays.get(j);
-     println("Display "+j+ " type: "+temp.getType());
-     
-     if (type.equals(temp.getType())) {
-     b1.displays.get(j).setValue(figure);
-     println("Value assigned");
-     } else {
-     //println("NO NO NO COINCIDENCE");
-     }
-     }
-     */
-  }
-}
-
-void blockAssign() {
-  for (int i =0; i<b1.displays.size(); i++) {
-    Display temp =  b1.displays.get(i);
-    println("TYPE: "+temp.getType());
   }
 }
