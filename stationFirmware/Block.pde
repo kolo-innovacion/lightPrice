@@ -7,8 +7,7 @@ class Block {
   Block(int input1, String input2) {
     position=input1;
     portName=input2;
-    //println("  Block "+input1+" created in port "+input2);
-    println("  Block "+position+" created in port "+portName);
+    addSerial(position, portName);
   }
 
   void setPortName(String input) {

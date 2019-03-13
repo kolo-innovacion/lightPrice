@@ -5,7 +5,7 @@ class Station {
   StringDict book =new StringDict();
   String bookString="";
   //String configPath="stationConfig01.xml";
-  String configPath="stationConfig02.xml";
+  String configPath="stationConfig03.xml";
   Station() {
     instanceSocket();
   }
@@ -31,7 +31,7 @@ class Station {
   }
 
   void updateBlocks() {
-    delay(1000);
+    delay(2000);
     for (int i=0; i<blocks.size(); i++) {
       //i is the blocks index
       for (int j=0; j<blocks.get(i).displays.size(); j++) {
@@ -79,7 +79,7 @@ class Station {
     //println();
 
     println("Station Instancing END -----");
-    println(  s0.blocks.get(0).displays.get(2).getType());//this is a test! Objects are real!!! (obviously, inside array limits)
+    //println(  s0.blocks.get(0).displays.get(2).getType());//this is a test! Objects are real!!! (obviously, inside array limits)
     //  println();
   }
 
