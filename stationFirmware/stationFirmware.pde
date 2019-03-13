@@ -19,6 +19,7 @@ void setup() {
   s0.updateBook();
   delay(50);
   println("After delay");
+  s0.accessBlocks();
   s0.updateBlocks();
   //b1 = new Block(3, 0);//instanciation; 3 displays, COM port in index 0
   //b1.setValue(0, "12.34");

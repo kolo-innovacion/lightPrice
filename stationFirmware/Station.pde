@@ -31,6 +31,13 @@ class Station {
   }
 
   void updateBlocks() {
+    for (int i=0; i<blocks.size(); i++) {
+      println("Block "+i+" hex values: ");
+      blocks.get(i).formatValues();
+    }
+  }
+
+  void accessBlocks() {
     delay(2000);
     for (int i=0; i<blocks.size(); i++) {
       //i is the blocks index
