@@ -28,7 +28,7 @@ class Block {
     return temp.getValue();
   }
 
-  void formatValues() {
+  void formatSendValues() {
 
     int blockSize=displays.size();
 
@@ -51,6 +51,14 @@ class Block {
     int chksum=tempSum%256;
     fullPhrase[20]=chksum;
     fullPhrase[21]=constants[5];
-    printArray(fullPhrase);
+
+    //println("THIS BLOCK IS:  "+position);
+
+    byte[]fullPhraseByte=new byte[fullPhrase.length];
+    fullPhraseByte=byte(fullPhrase);
+    //printArray(fullPhraseByte);
+
+    serialPorts.get(position).write(fullPhraseByte);
+    println("Block "+position+"  Serial values sent.");
   }
 }
