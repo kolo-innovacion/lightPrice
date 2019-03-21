@@ -69,7 +69,8 @@ class Station {
         XML typ = displays[j].getChild("type");
         String temPos=pos.getContent();
         String temTyp=typ.getContent();
-        s0.blocks.get(i).displays.add(new Display(int(temPos), temTyp));
+        //s0.blocks.get(i).displays.add(new Display(int(temPos), temTyp));
+        s0.blocks.get(i).displays.add(new Display(i, int(temPos), temTyp));
       }
     }
 
