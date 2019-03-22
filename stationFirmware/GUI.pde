@@ -1,5 +1,6 @@
 //int digitColor=0xffff0000;
 int digitColor=159;
+int detailColor=0xffff0000;
 //int labelColor=0xffffffff;
 int labelColor=159;
 int borderColor=63;
@@ -29,11 +30,12 @@ int upperMar=20;
 int module=20;
 int labelMar=module*3;
 
-int digitSize=100;
+int digitSize=70;
 int labelSize=20;
 
 //fonts
 PFont digitsFont;
+PFont detailFont;
 PFont labelFont;
 PFont consoleFont;
 
@@ -51,6 +53,7 @@ void guiSetup() {
 
   labelFont = createFont("arial", labelSize); 
   consoleFont = createFont("arial", labelSize-4);
+  detailFont = createFont("arial", labelSize-4);
   digitsFont= createFont("digital-7.ttf", digitSize);
 
   //create gui cp5 obj
@@ -64,4 +67,7 @@ void guiSetup() {
 
   //ArrayList<Textlabel> guiDisplays  = new ArrayList<Textlabel>();
   //println(digits.getClass());
+}
+
+void updateGUI() {
 }

@@ -7,7 +7,6 @@ Station s0;
 String[] values = {"88.88", "99.99", "77.77"};
 String[] types = {"A", "A", "B"};
 
-int globalAux=0;
 
 void setup() {
   size(800, 600);
