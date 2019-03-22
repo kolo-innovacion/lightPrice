@@ -20,7 +20,7 @@ class Display {
     createGuiDigs(bloc, pos, value);
 
     guiDetail=cp5.addTextlabel("guiDetail"+"B"+str(bloc)+"P"+str(pos))
-      .setText("B:"+str(bloc)+"  P:"+str(pos)+"  T:"+type)
+      .setText(type+"  B:"+str(bloc)+"  P:"+str(pos))
       .setPosition(leftMar+pos*250, digitSize+upperMar+bloc*150)
       .setColorValue(detailColor)
       .setFont(detailFont);
