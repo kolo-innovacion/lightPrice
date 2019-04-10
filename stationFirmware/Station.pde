@@ -10,10 +10,24 @@ class Station {
       .setPosition(module, 28.0*module)
       .setHeight(30)
       .setBackgroundHeight(140)
-      .setWidth(width-leftMar)
+      .setWidth(int(width*0.720))
       .setBackgroundColor(color(255, 50))
       .disableCollapse()
       .setLabel("")
+      ;
+
+    cp5.addTextlabel("ConsoleLabel")
+      .setText("Console")
+      .setPosition(module, 26.60*module)
+      .setColorValue(255)
+      .setFont(labelFont)
+      ;
+
+    cp5.addTextlabel("StationLabel")
+      .setText("Station 1010")
+      .setPosition(20*module, 28*module)
+      .setColorValue(255)
+      .setFont(labelFont)
       ;
   }
   void updateBook() {
