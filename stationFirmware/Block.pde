@@ -8,17 +8,56 @@ class Block {
     position=input1;
     portName=input2;
     addSerial(position, portName);
-    createGui(input1);
+    createGui();
   }
-  void createGui(int bnum) {
+  void createGui() {
 
-    cp5.addGroup("Block"+str(bnum))
-      .setPosition(leftMar*0.50, upperMar)
+    int groupStartX=module;
+    int groupStartY=2*module+position*8*module;
+
+    cp5.addGroup("Block"+str(position))
+      .setPosition(groupStartX, groupStartY)
+      .setHeight(30)
       .setBackgroundHeight(140)
       .setWidth(width-leftMar)
-      //.setHeight(100)
       .setBackgroundColor(color(255, 50))
       .disableCollapse()
+      .setLabel("")
+      ;
+
+    cp5.addTextlabel("dispIndexLabel")
+      .setText("Display: ")
+      .setPosition(groupStartX+0.250*module, groupStartY-1.50*module)
+      .setColorValue(255)
+      .setFont(labelFont)
+      ;
+
+    cp5.addTextlabel("dispIndex"+str(0))
+      .setText("0")
+      .setPosition(groupStartX+10*module, groupStartY-1.50*module)
+      .setColorValue(255)
+      .setFont(labelFont)
+      ;
+
+    cp5.addTextlabel("dispIndex"+str(1))
+      .setText("1")
+      .setPosition(groupStartX+24*module, groupStartY-1.50*module)
+      .setColorValue(255)
+      .setFont(labelFont)
+      ;
+
+    cp5.addTextlabel("dispIndex"+str(2))
+      .setText("2")
+      .setPosition(groupStartX+35*module, groupStartY-1.50*module)
+      .setColorValue(255)
+      .setFont(labelFont)
+      ;
+
+    cp5.addTextlabel("portLabel"+str(position))
+      .setText("BLOCK "+str(position)+portName)
+      .setPosition(leftMar*0.70, position*150+upperMar*4.0)
+      .setColorValue(okColor)
+      .setFont(labelFont)
       ;
   }
 

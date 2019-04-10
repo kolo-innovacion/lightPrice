@@ -30,6 +30,8 @@ int upperMar=20;
 int module=20;
 int labelMar=module*3;
 
+int groupMar=20;
+
 int digitSize=70;
 int labelSize=20;
 

@@ -20,8 +20,8 @@ class Display {
     createGuiDigs(bloc, pos, value);
 
     guiDetail=cp5.addTextlabel("guiDetail"+"B"+str(bloc)+"P"+str(pos))
-      .setText(type+"  B:"+str(bloc)+"  P:"+str(pos))
-      .setPosition(140+leftMar+pos*250, digitSize+20+upperMar+bloc*150)
+      .setText(type)
+      .setPosition(140+leftMar+pos*250, digitSize+2*module+upperMar+bloc*150)
       .setColorValue(detailColor)
       .setFont(detailFont);
 
@@ -46,7 +46,7 @@ class Display {
       valueDigs[i]=cp5.addTextlabel("B"+str(bloc)+"P"+str(pos)+"D"+i)
         //.setText(str(i))
         .setText(str(input.charAt(i)))
-        .setPosition(100+leftMar+pos*250+(i*(digitSize*0.50)), 20+upperMar+bloc*150)
+        .setPosition(115+leftMar+pos*250+(i*(digitSize*0.50)), 2.0*module+upperMar+bloc*150)
         .setColorValue(digitColor)
         .setFont(digitsFont);
     }
