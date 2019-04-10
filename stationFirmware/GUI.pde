@@ -1,5 +1,7 @@
 PImage logo;
 
+Println console;
+Textarea myTextarea;
 
 //int digitColor=0xffff0000;
 int digitColor=192;
