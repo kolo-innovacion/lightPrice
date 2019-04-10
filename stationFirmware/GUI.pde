@@ -78,11 +78,11 @@ void guiSetup() {
   cp5.enableShortcuts();
 
   myTextarea = cp5.addTextarea("txt")
-    .setPosition(module, 28.0*module)
-    .setSize(200, 200)
-    .setFont(createFont("", 10))
+    .setPosition(1.50*module, 28.25*module)
+    .setSize(int(width*0.70), 130)
+    .setFont(createFont("", 14))
     .setLineHeight(14)
-    .setColor(color(200))
+    .setColor(color(255))
     .setColorBackground(color(0, 100))
     .setColorForeground(color(255, 100));
   ;
