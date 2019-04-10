@@ -19,6 +19,29 @@ class Station {
       ;
 
 
+    /*
+
+     cp5.addTextlabel("noBlock0")
+     .setText("NO BLOCK HAS BEEN CONFIGURED ON THIS POSITION")
+     .setPosition(5.5*module, 4*module)
+     .setColorValue(255)
+     .setFont(noBlockFont)
+     ;
+     cp5.addTextlabel("noBlock1")
+     .setText("NO BLOCK HAS BEEN CONFIGURED ON THIS POSITION")
+     .setPosition(5.5*module, 12*module)
+     .setColorValue(255)
+     .setFont(noBlockFont)
+     ;
+     
+     cp5.addTextlabel("noBlock2")
+     .setText("NO BLOCK HAS BEEN CONFIGURED ON THIS POSITION")
+     .setPosition(5.5*module, 20*module)
+     .setColorValue(255)
+     .setFont(noBlockFont)
+     ;
+     */    
+
 
     cp5.addTextlabel("ConsoleLabel")
       .setText("Console")

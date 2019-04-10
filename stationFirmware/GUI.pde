@@ -54,6 +54,7 @@ PFont digitsFont;
 PFont detailFont;
 PFont labelFont;
 PFont consoleFont;
+PFont noBlockFont;
 
 //userConsole
 Textarea consoleArea;
@@ -69,6 +70,7 @@ void guiSetup() {
 
 
   labelFont = createFont("arial", labelSize); 
+  noBlockFont = createFont("arial", 1.2*labelSize); 
   consoleFont = createFont("arial", labelSize-4);
   detailFont = createFont("arial", labelSize-4);
   digitsFont= createFont("digital-7.ttf", digitSize);
@@ -78,7 +80,7 @@ void guiSetup() {
   cp5.enableShortcuts();
 
   myTextarea = cp5.addTextarea("txt")
-    .setPosition(1.50*module, 28.25*module)
+    .setPosition(1.50*module, 28.35*module)
     .setSize(int(width*0.70), 130)
     .setFont(createFont("", 14))
     .setLineHeight(14)

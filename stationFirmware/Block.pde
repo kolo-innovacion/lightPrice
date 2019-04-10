@@ -13,6 +13,7 @@ class Block {
 
   void createGui() {
 
+
     int groupStartX=module;
     int groupStartY=2*module+position*8*module;
 
@@ -24,11 +25,15 @@ class Block {
 
     /////////////////
     //delete this after design:
-    position++;
-    createGuiBlockN();  
-    position++;
-    createGuiBlockN();
-    position=0;
+    /*
+    
+     position++;
+     createGuiBlockN();  
+     position++;
+     createGuiBlockN();
+     position=0;
+     */
+
     /////////////////
   }
 

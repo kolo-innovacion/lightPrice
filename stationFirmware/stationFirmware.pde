@@ -21,14 +21,28 @@ void setup() {
   s0.updateBlocks();
   createConsole();
 }
+int aux=0;
 void draw() {
   background(backColor);
   image(logo, 33*module, 31.25*module, 150, 150*0.4470);
-  //tint(255, 255*sin(frameCount/4));
-  //ellipse(mouseX, mouseY, 100, 100);
-  println("CONSOLE TEST"+frameCount);
+
+  if (aux<1) {
+    printole("Station is up and running.");
+    aux++;
+  }
 }
 
 void instanceStation() {
   s0=new Station();
+}
+
+void notifyStart() {
+}
+
+void printole(String input) {
+  println(input);
+}
+
+void keyPressed() {
+  //console.clear();
 }
