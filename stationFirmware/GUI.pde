@@ -1,5 +1,5 @@
 //int digitColor=0xffff0000;
-int digitColor=159;
+int digitColor=192;
 int detailColor=0xffff0000;
 //int labelColor=0xffffffff;
 int labelColor=159;
