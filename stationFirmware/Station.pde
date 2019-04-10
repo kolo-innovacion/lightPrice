@@ -24,9 +24,16 @@ class Station {
       ;
 
     cp5.addTextlabel("StationLabel")
-      .setText("Station 1010")
-      .setPosition(20*module, 28*module)
+      .setText("Station ID: 1010")
+      .setPosition(32.6*module, 26.60*module)
       .setColorValue(255)
+      .setFont(labelFont)
+      ;
+
+    cp5.addTextlabel("serverLabel")
+      .setText("Server connection")
+      .setPosition(32.6*module, 28.60*module)
+      .setColorValue(okColor)
       .setFont(labelFont)
       ;
   }
