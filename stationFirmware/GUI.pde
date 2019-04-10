@@ -1,7 +1,6 @@
 PImage logo;
 
-Println console;
-Textarea myTextarea;
+
 
 //int digitColor=0xffff0000;
 int digitColor=192;
@@ -17,6 +16,16 @@ int backColor=0;
 String manualValue="0000.";
 
 ControlP5 cp5;
+
+///////////////////
+
+
+Textarea myTextarea;
+int c = 0;
+Println console;
+
+
+/////////////////////////
 
 Textlabel digits;
 Textlabel serialLabel;
@@ -66,7 +75,21 @@ void guiSetup() {
 
   //create gui cp5 obj
   cp5 = new ControlP5(this);
-}
+  cp5.enableShortcuts();
 
+  myTextarea = cp5.addTextarea("txt")
+    .setPosition(module, 28.0*module)
+    .setSize(200, 200)
+    .setFont(createFont("", 10))
+    .setLineHeight(14)
+    .setColor(color(200))
+    .setColorBackground(color(0, 100))
+    .setColorForeground(color(255, 100));
+  ;
+}
+void createConsole() {
+
+  console = cp5.addConsole(myTextarea);//
+}
 void updateGUI() {
 }

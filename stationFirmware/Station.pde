@@ -7,31 +7,18 @@ class Station {
   Station() {
     instanceSocket();
 
-    /*
+
     cp5.addGroup("Station")
-     .setPosition(module, 28.0*module)
-     .setHeight(30)
-     .setBackgroundHeight(140)
-     .setWidth(int(width*0.720))
-     .setBackgroundColor(color(255, 50))
-     .disableCollapse()
-     .setLabel("")
-     ;
-     
-     */
-    myTextarea=cp5.addTextarea("consoleText")
-
       .setPosition(module, 28.0*module)
-      .setSize(200, 200)
-      .setFont(createFont("", 10))
-      .setLineHeight(14)
-      .setColor(color(200))
-      .setColorBackground(color(0, 100))
-      .setColorForeground(color(255, 100));
-    ;
+      .setHeight(30)
+      .setBackgroundHeight(140)
+      .setWidth(int(width*0.720))
+      .setBackgroundColor(color(255, 50))
+      .disableCollapse()
+      .setLabel("")
+      ;
 
 
-    console = cp5.addConsole(myTextarea);//
 
     cp5.addTextlabel("ConsoleLabel")
       .setText("Console")

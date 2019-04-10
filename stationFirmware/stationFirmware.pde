@@ -19,12 +19,14 @@ void setup() {
   println("After delay");
   s0.accessBlocks();
   s0.updateBlocks();
+  createConsole();
 }
 void draw() {
   background(backColor);
   image(logo, 33*module, 31.25*module, 150, 150*0.4470);
   //tint(255, 255*sin(frameCount/4));
   //ellipse(mouseX, mouseY, 100, 100);
+  println("CONSOLE TEST"+frameCount);
 }
 
 void instanceStation() {
