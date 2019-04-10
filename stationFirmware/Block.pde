@@ -10,55 +10,76 @@ class Block {
     addSerial(position, portName);
     createGui();
   }
+
   void createGui() {
 
     int groupStartX=module;
     int groupStartY=2*module+position*8*module;
 
-    cp5.addGroup("Block"+str(position))
-      .setPosition(groupStartX, groupStartY)
-      .setHeight(30)
-      .setBackgroundHeight(140)
-      .setWidth(width-leftMar)
-      .setBackgroundColor(color(255, 50))
-      .disableCollapse()
-      .setLabel("")
-      ;
+    if (position==0) {
+      cp5.addGroup("Block"+str(position))
+        .setPosition(groupStartX, groupStartY)
+        .setHeight(30)
+        .setBackgroundHeight(140)
+        .setWidth(width-leftMar)
+        .setBackgroundColor(color(255, 50))
+        .disableCollapse()
+        .setLabel("")
+        ;
 
-    cp5.addTextlabel("dispIndexLabel")
-      .setText("Display: ")
-      .setPosition(groupStartX+0.250*module, groupStartY-1.50*module)
-      .setColorValue(255)
-      .setFont(labelFont)
-      ;
+      cp5.addTextlabel("dispIndexLabel")
+        .setText("Display: ")
+        .setPosition(groupStartX+0.250*module, groupStartY-1.50*module)
+        .setColorValue(255)
+        .setFont(labelFont)
+        ;
 
-    cp5.addTextlabel("dispIndex"+str(0))
-      .setText("0")
-      .setPosition(groupStartX+10*module, groupStartY-1.50*module)
-      .setColorValue(255)
-      .setFont(labelFont)
-      ;
+      cp5.addTextlabel("dispIndex"+str(0))
+        .setText("0")
+        .setPosition(groupStartX+10*module, groupStartY-1.50*module)
+        .setColorValue(255)
+        .setFont(labelFont)
+        ;
 
-    cp5.addTextlabel("dispIndex"+str(1))
-      .setText("1")
-      .setPosition(groupStartX+24*module, groupStartY-1.50*module)
-      .setColorValue(255)
-      .setFont(labelFont)
-      ;
+      cp5.addTextlabel("dispIndex"+str(1))
+        .setText("1")
+        .setPosition(groupStartX+24*module, groupStartY-1.50*module)
+        .setColorValue(255)
+        .setFont(labelFont)
+        ;
 
-    cp5.addTextlabel("dispIndex"+str(2))
-      .setText("2")
-      .setPosition(groupStartX+35*module, groupStartY-1.50*module)
-      .setColorValue(255)
-      .setFont(labelFont)
-      ;
+      cp5.addTextlabel("dispIndex"+str(2))
+        .setText("2")
+        .setPosition(groupStartX+35*module, groupStartY-1.50*module)
+        .setColorValue(255)
+        .setFont(labelFont)
+        ;
 
-    cp5.addTextlabel("portLabel"+str(position))
-      .setText("BLOCK "+str(position)+portName)
-      .setPosition(leftMar*0.70, position*150+upperMar*4.0)
-      .setColorValue(okColor)
-      .setFont(labelFont)
-      ;
+      cp5.addTextlabel("portLabel"+str(position))
+        .setText("BLOCK "+str(position)+"\n"+"\n"+portName)
+        .setPosition(leftMar*0.70, position*150+upperMar*3.40)
+        .setColorValue(okColor)
+        .setFont(labelFont)
+        ;
+    } else {
+
+      cp5.addGroup("Block"+str(position))
+        .setPosition(groupStartX, groupStartY)
+        .setHeight(0)
+        .setBackgroundHeight(140)
+        .setWidth(width-leftMar)
+        .setBackgroundColor(color(255, 50))
+        .disableCollapse()
+        .setLabel("")
+        ;
+
+      cp5.addTextlabel("portLabel"+str(position))
+        .setText("BLOCK "+str(position)+"\n"+"\n"+portName)
+        .setPosition(leftMar*0.70, position*150+upperMar*3.40)
+        .setColorValue(okColor)
+        .setFont(labelFont)
+        ;
+    }
   }
 
   void setPortName(String input) {

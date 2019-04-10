@@ -60,15 +60,6 @@ void guiSetup() {
 
   //create gui cp5 obj
   cp5 = new ControlP5(this);
-
-  //digits = cp5.addTextlabel("digits")
-  //  .setText("00.00")
-  //  .setPosition(leftMar, upperMar)
-  //  .setColorValue(digitColor)
-  //  .setFont(digitsFont);
-
-  //ArrayList<Textlabel> guiDisplays  = new ArrayList<Textlabel>();
-  //println(digits.getClass());
 }
 
 void updateGUI() {
