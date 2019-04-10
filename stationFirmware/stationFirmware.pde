@@ -9,7 +9,7 @@ String[] types = {"A", "A", "B"};
 
 
 void setup() {
-  size(850, 600);
+  size(850, 725);
 
   guiSetup();
   instanceStation();
@@ -22,6 +22,8 @@ void setup() {
 }
 void draw() {
   background(backColor);
+  image(logo, 32.5*module, 31.25*module, 150, 150*0.4470);
+  //tint(255, 255*sin(frameCount/4));
   //ellipse(mouseX, mouseY, 100, 100);
 }
 

@@ -1,3 +1,6 @@
+PImage logo;
+
+
 //int digitColor=0xffff0000;
 int digitColor=192;
 int detailColor=0xffff0000;
@@ -47,6 +50,7 @@ Textfield manualInput;
 
 //gui Functions
 void guiSetup() {
+  logo=loadImage("kolo_logo_white.png");
   noStroke();
 
   frameRate(20);

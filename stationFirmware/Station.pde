@@ -6,6 +6,15 @@ class Station {
   String configPath="stationConfig03.xml";
   Station() {
     instanceSocket();
+    cp5.addGroup("Station")
+      .setPosition(module, 28.0*module)
+      .setHeight(30)
+      .setBackgroundHeight(140)
+      .setWidth(width-leftMar)
+      .setBackgroundColor(color(255, 50))
+      .disableCollapse()
+      .setLabel("")
+      ;
   }
   void updateBook() {
     stationSocket.sendMessage("giveIt2MeBaby");
