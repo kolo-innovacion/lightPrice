@@ -9,7 +9,7 @@ String[] types = {"A", "A", "B"};
 
 
 void setup() {
-  size(800, 600);
+  size(850, 600);
 
   guiSetup();
   instanceStation();

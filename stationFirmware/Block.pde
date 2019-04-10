@@ -8,6 +8,18 @@ class Block {
     position=input1;
     portName=input2;
     addSerial(position, portName);
+    createGui(input1);
+  }
+  void createGui(int bnum) {
+
+    cp5.addGroup("Block"+str(bnum))
+      .setPosition(leftMar*0.50, upperMar)
+      .setBackgroundHeight(140)
+      .setWidth(width-leftMar)
+      //.setHeight(100)
+      .setBackgroundColor(color(255, 50))
+      .disableCollapse()
+      ;
   }
 
   void setPortName(String input) {

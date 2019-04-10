@@ -21,7 +21,7 @@ class Display {
 
     guiDetail=cp5.addTextlabel("guiDetail"+"B"+str(bloc)+"P"+str(pos))
       .setText(type+"  B:"+str(bloc)+"  P:"+str(pos))
-      .setPosition(leftMar+pos*250, digitSize+upperMar+bloc*150)
+      .setPosition(140+leftMar+pos*250, digitSize+20+upperMar+bloc*150)
       .setColorValue(detailColor)
       .setFont(detailFont);
 
@@ -46,7 +46,7 @@ class Display {
       valueDigs[i]=cp5.addTextlabel("B"+str(bloc)+"P"+str(pos)+"D"+i)
         //.setText(str(i))
         .setText(str(input.charAt(i)))
-        .setPosition(leftMar+pos*250+(i*(digitSize*0.50)), upperMar+bloc*150)
+        .setPosition(100+leftMar+pos*250+(i*(digitSize*0.50)), 20+upperMar+bloc*150)
         .setColorValue(digitColor)
         .setFont(digitsFont);
     }
