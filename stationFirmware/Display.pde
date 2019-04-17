@@ -25,8 +25,8 @@ class Display {
       .setColorValue(detailColor)
       .setFont(detailFont);
 
-    println("    Display  "+pos+"  has been added with type  "+typ);
-    //println(guiValue.getLabel());
+    printole("    Display  "+pos+"  has been added with type  "+typ);
+    //printole(guiValue.getLabel());
   }
 
   String getValue() {

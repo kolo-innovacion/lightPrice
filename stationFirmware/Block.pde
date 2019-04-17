@@ -154,13 +154,13 @@ class Block {
     fullPhrase[20]=chksum;
     fullPhrase[21]=constants[5];
 
-    //println("THIS BLOCK IS:  "+position);
+    //printole("THIS BLOCK IS:  "+position);
 
     byte[]fullPhraseByte=new byte[fullPhrase.length];
     fullPhraseByte=byte(fullPhrase);
     //printArray(fullPhraseByte);
 
     serialPorts.get(position).write(fullPhraseByte);
-    println("Block "+position+"  Serial values sent.");
+    printole("Block "+position+"  Serial values sent.");
   }
 }
