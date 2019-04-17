@@ -80,8 +80,8 @@ class Station {
       String type=typeObj.getContent();
       String figure=figureObj.getContent();
       printole("XML current type: "+type+" . Value: "+figure);
-      s0.book.set(type, figure);
-      printole("Dictionary: "+s0.book.get(type));
+      station.book.set(type, figure);
+      printole("Dictionary: "+station.book.get(type));
     }
   }
 
@@ -120,14 +120,14 @@ class Station {
 
       XML[] displays = blocks[i].getChildren("display");
 
-      s0.blocks.add(new Block(i, currPort));
+      station.blocks.add(new Block(i, currPort));
       for (int j=0; j<displays.length; j++) {
         XML pos = displays[j].getChild("position");
         XML typ = displays[j].getChild("type");
         String temPos=pos.getContent();
         String temTyp=typ.getContent();
         //s0.blocks.get(i).displays.add(new Display(int(temPos), temTyp));
-        s0.blocks.get(i).displays.add(new Display(i, int(temPos), temTyp));
+        station.blocks.get(i).displays.add(new Display(i, int(temPos), temTyp));
       }
     }
 

@@ -2,7 +2,7 @@ import controlP5.*;
 
 Block b1;
 
-Station s0;
+Station station;
 
 String[] values = {"88.88", "99.99", "77.77"};
 String[] types = {"A", "A", "B"};
@@ -13,7 +13,7 @@ void setup() {
 
   guiSetup();
   instanceStation();
-  s0.createStation();
+  station.createStation();
   //s0.updateBook();
   //delay(50);
   //println("After delay");
@@ -44,7 +44,7 @@ void guiUpdate() {
 }
 
 void instanceStation() {
-  s0=new Station();
+  station=new Station();
 }
 
 void notifyStart() {
@@ -60,13 +60,11 @@ void display(String input) {
 }
 
 void updateRoutine() {
-  //console.clear();
-  //println("THIS A CONSOLE TEST");
 
-  s0.updateBook();
+  station.updateBook();
   delay(50);
-  s0.accessBlocks();
-  s0.updateBlocks();
+  station.accessBlocks();
+  station.updateBlocks();
   display("updated values");
 }
 

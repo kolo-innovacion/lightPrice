@@ -20,7 +20,7 @@ void webSocketEvent(String input) {
 
 
     temp=parseXML(input);
-    s0.setBook(temp);
+    station.setBook(temp);
   } else {
     //println("Wrong Data");
   }
@@ -45,7 +45,7 @@ void digestXML(XML input) {
     String type=typeObj.getContent();
     String figure=figureObj.getContent();
     //println("XML current type: "+type+" . Value: "+figure);
-    s0.book.set(type, figure);
+    station.book.set(type, figure);
     //println(s0.book.get(type));
   }
 }
