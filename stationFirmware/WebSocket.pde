@@ -11,18 +11,18 @@ void webSocketEvent(String input) {
   XML temp = new XML("null");
 
   if (checkFetch(input)) {
-    println();
+    //println();
 
-    println("Correct Data. Book updated");
+    //println("Correct Data. Book updated");
 
-    println();
+    //println();
 
 
 
     temp=parseXML(input);
     s0.setBook(temp);
   } else {
-    println("Wrong Data");
+    //println("Wrong Data");
   }
 }
 
@@ -44,8 +44,8 @@ void digestXML(XML input) {
 
     String type=typeObj.getContent();
     String figure=figureObj.getContent();
-    println("XML current type: "+type+" . Value: "+figure);
+    //println("XML current type: "+type+" . Value: "+figure);
     s0.book.set(type, figure);
-    println(s0.book.get(type));
+    //println(s0.book.get(type));
   }
 }

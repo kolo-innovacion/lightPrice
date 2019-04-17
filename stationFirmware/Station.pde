@@ -66,7 +66,7 @@ class Station {
   }
   void updateBook() {
     stationSocket.sendMessage("giveIt2MeBaby");
-    println("Petition sent.");
+    printole("Petition sent.");
   }
 
   void setBook(XML input) {
@@ -79,15 +79,15 @@ class Station {
 
       String type=typeObj.getContent();
       String figure=figureObj.getContent();
-      println("XML current type: "+type+" . Value: "+figure);
+      printole("XML current type: "+type+" . Value: "+figure);
       s0.book.set(type, figure);
-      println("Dictionary: "+s0.book.get(type));
+      printole("Dictionary: "+s0.book.get(type));
     }
   }
 
   void updateBlocks() {
     for (int i=0; i<blocks.size(); i++) {
-      //println("Block "+i+" hex values: ");
+      //printole("Block "+i+" hex values: ");
       blocks.get(i).formatSendValues();
     }
   }
@@ -101,7 +101,7 @@ class Station {
         String currType=blocks.get(i).displays.get(j).getType();
         blocks.get(i).displays.get(j).setValue(book.get(currType));
         String currValue=blocks.get(i).displays.get(j).getValue();
-        println("Block "+i+" display "+j+" has type "+currType+" and price of "+currValue);
+        printole("Block "+i+" display "+j+" has type "+currType+" and price of "+currValue);
       }
     }
   }
@@ -111,7 +111,7 @@ class Station {
     configFile = loadXML(configPath);
 
     XML[] blocks = configFile.getChildren("block");
-    println("Station Instancing START");
+    printole("Station Instancing START");
 
     for (int i=0; i<blocks.length; i++) {
 
@@ -131,7 +131,7 @@ class Station {
       }
     }
 
-    println("Station Instancing END -----");
+    printole("Station Instancing END -----");
   }
 
   void setDictionary() {

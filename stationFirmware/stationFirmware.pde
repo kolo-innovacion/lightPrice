@@ -1,3 +1,5 @@
+//import com.dhchoi.*;
+
 import controlP5.*;
 
 Block b1;
@@ -45,4 +47,10 @@ void printole(String input) {
 
 void keyPressed() {
   //console.clear();
+  //println("THIS A CONSOLE TEST");
+
+  s0.updateBook();
+  delay(50);
+  s0.accessBlocks();
+  s0.updateBlocks();
 }
