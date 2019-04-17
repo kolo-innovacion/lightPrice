@@ -20,7 +20,7 @@ void setup() {
   //s0.accessBlocks();
   //s0.updateBlocks();
   createConsole();
-  timerSetup();
+  //timerSetup();
 }
 int aux=0;
 void draw0() {
@@ -34,6 +34,7 @@ void draw0() {
 }
 void draw() {
   guiUpdate();
+  loopFrame(5);
   //timersUpdate();
 }
 
@@ -69,7 +70,7 @@ void updateRoutine() {
 }
 
 void keyPressed() {
-  println("Starting timer...");
+  //println("Starting timer...");
   //timer.start();
-  timer = CountdownTimerService.getNewCountdownTimer(this).configure(100, refTime).start();
+  //timer = CountdownTimerService.getNewCountdownTimer(this).configure(100, refTime).start();
 }
