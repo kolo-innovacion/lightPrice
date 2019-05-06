@@ -2,9 +2,9 @@ import websockets.*;
 WebsocketClient stationSocket;
 
 void instanceSocket() {
-  //stationSocket= new WebsocketClient(this, "ws://localhost:8025/john");
+  stationSocket= new WebsocketClient(this, "ws://localhost:8025/john");
 
-  stationSocket= new WebsocketClient(this, "ws://167.114.208.204:8025/john");
+  //stationSocket= new WebsocketClient(this, "ws://167.114.208.204:8025/john");
 }
 
 void webSocketEvent(String input) {
