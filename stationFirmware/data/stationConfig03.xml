@@ -1,6 +1,6 @@
 <station id="1010">
 	<block>
-		<port>COM7</port>
+		<port>COM13</port>
 		<display>
 			<position>0</position>
 			<type>A</type>
