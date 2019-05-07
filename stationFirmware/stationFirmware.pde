@@ -67,7 +67,7 @@ void updateRoutine() {
   delay(50);
   station.accessBlocks();
   station.updateBlocks();
-  display("updated values");
+  display("Updated Values");
 }
 
 void keyPressed() {
