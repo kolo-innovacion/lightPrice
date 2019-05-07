@@ -1,6 +1,6 @@
 <station id="1010">
 	<block>
-		<port>COM13</port>
+		<port>COM15</port>
 		<display>
 			<position>0</position>
 			<type>A</type>
@@ -15,7 +15,7 @@
 		</display>
 	</block>
 	<block>
-		<port>COM14</port>
+		<port>COM16</port>
 		<display>
 			<position>0</position>
 			<type>A</type>
