@@ -20,7 +20,9 @@ class Display {
     createGuiDigs(bloc, pos, value);
 
     guiDetail=cp5.addTextlabel("guiDetail"+"B"+str(bloc)+"P"+str(pos))
-      .setText(type)
+      //.setText(type)
+      .setText(labelType(type))
+      //.setText("OXXO")
       .setPosition(140+leftMar+pos*250, digitSize+2*module+upperMar+bloc*150)
       .setColorValue(detailColor)
       .setFont(detailFont);
@@ -55,6 +57,21 @@ class Display {
   void setGuiDigs(String input) {
     for (int i=0; i<valueDigs.length; i++) {
       valueDigs[i].setText(str(input.charAt(i)));
+    }
+  }
+
+  String labelType(String input) {
+    switch(input) {
+    case "A":
+      return "MAGNA";
+    case "B":
+      return "PREMIUM";
+    case "C":
+      return "DIESEL";
+    case "D":
+      return "GASLP";
+    default:
+      return "NON VALID TYPE";
     }
   }
 } 
